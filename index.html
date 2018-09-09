@@ -1,6 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
 <head>
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+<SCRIPT LANGUAGE="JavaScript">
+    function encodeSongName(){
+        var s = document.getElementById("song1");
+        location.href="song.html?"+"song1="+encodeURI(s.innerHTML);
+    }
+</SCRIPT>
+<body>
+<SCRIPT LANGUAGE="JavaScript">
+    var obj = {"莉莉安-宋东野": ["http://data.17jita.com/attachment/forum/201505/09/224634xw0659659c66ocxc.gif", "http://data.17jita.com/attachment/forum/201505/09/224636niv30wvmt0h3rmta.gif"],
+               };
+    obj = JSON.stringify(obj); 
+    localStorage.setItem("songs", obj);
+</SCRIPT>
 <div class="fullCard" id="thumbnail">
   <div class="cardContent">
     <div class="cardText">
@@ -8,9 +22,8 @@
       <hr>
     </div>
     <div class="cardLinks">
-      <a href="http://www.yuesir.com/ipu/2457.html" target="_blank" class="links">南山南-马頔</a><br><br>
-      <a href="http://www.17jita.com/tab/img/6954.html" target="_blank" class="links">一千年以后-林俊杰</a><br><br>
-      <a href="lilian.html" target="_blank" class="links">莉莉安-宋东野</a>
+      <a href="song.html" id="song1" target="_blank" class="links" onclick="encodeSongName()">莉莉安-宋东野</a>
     </div>
   </div>
 </div>
+</body>

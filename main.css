@@ -29,7 +29,7 @@
   }
   
   .cardContent {
-    padding: 10px;
+    padding: 10px 0px;
   }
 
   .cardText {
@@ -37,10 +37,10 @@
   }
 
   .pics {
-    padding: 10px;
+    #padding: 10px 0px;
   }
   
   .song_img {
     width: 100%;
-    padding: 5px;
+    #padding: 5px 0px;
   }

@@ -1,0 +1,33 @@
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+<head>
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<div class="fullCard" id="thumbnail">
+  <div class="cardContent">
+      <h4 id="song-title"></h4>
+      <hr>
+    <div class="pics" id="song-pics">
+      
+    </div>
+  </div>
+</div>
+<script language="javascript" type="text/javascript">
+  var loc = location.href;
+  var len = loc.length;
+  var index = loc.indexOf("=");
+  var title = decodeURI(loc.substr(index+1, len-index));
+  document.getElementById("song-title").innerHTML = title;
+
+  songs = JSON.parse(localStorage.getItem("songs"));
+
+  var song_pics_div = document.getElementById("song-pics");
+  for(var i=0;i<songs[title].length;i++){
+    var current_img = document.createElement("img");
+    current_img.className = "song_img";
+    current_img.src=songs[title][i];
+    song_pics_div.appendChild(current_img);
+  }
+  
+</script>
+</body>
